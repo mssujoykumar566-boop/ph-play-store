@@ -1,25 +1,32 @@
 import React from 'react';
 import logoImg from '../../assets/images/logo.png'
-import { Link } from 'react-router';
+import {  NavLink } from 'react-router';
+import { FaGithub } from 'react-icons/fa';
+import MyNavLink from './MyNavLink';
 
 
 const Navbar = () => {
     return (
-        <nav className='flex justify-between items-center gap-4 bg-white shadow py-2'>
-            <img src={logoImg} alt="" className='w-12.5' />
+        <nav className='bg-white shadow'>
+            <div className='flex justify-between items-center gap-4  py-2 container mx-auto'>
+                <img src={logoImg} alt="" className='w-12.5' />
             <ul className='flex justify-between items-center gap-2'>
                 <li>
-                    <Link>Home</Link>
+                   
+                          <MyNavLink to={"/"}>Home</MyNavLink>
                 </li>
                 <li>
-                    <Link>Apps</Link>
+                    <MyNavLink to={"/apps"}>Apps</MyNavLink>
+                        
                 </li>
                 <li>
-                    <Link>Installation</Link>
+                    <MyNavLink to={"/installedApps"}>Installation</MyNavLink>
                 </li>
                
             </ul>
-            <button>Contribute</button>
+            <button className="btn bg-purple-500 text-white"> <FaGithub /> Contribute</button>
+            </div>
+            
         </nav>
     );
 };
