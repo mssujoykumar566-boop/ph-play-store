@@ -7,6 +7,7 @@ import Apps from "./Pages/apps/Apps";
 import InstallApps from "./Pages/installApps/installApps";
 import "./index.css"
 import NotFoundPage from "./Pages/NotFoundPage/NotFoundPage";
+import HomePage from "./Pages/homePage/HomePage";
 
 const router = createBrowserRouter([
 
@@ -15,12 +16,14 @@ const router = createBrowserRouter([
     element: <RootLayout/>, 
     children: [
       {
-        path:"/",
-        element: <h2>HomePage</h2>,
+        // path:"/",
+        index: true,
+        element: <HomePage/>,
+        loader: () => fetch("/data.json")
       },
       {
         path: "/apps",
-        element: <Apps/>
+        element: <Apps/>,
       },
       {
         path: "/installedApps",
