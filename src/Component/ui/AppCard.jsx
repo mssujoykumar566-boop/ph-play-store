@@ -3,9 +3,9 @@ import { FaDownload, FaStar } from 'react-icons/fa';
 
 const AppCard = ({app}) => {
     return (
-        <div className="card bg-base-100 w-96 shadow-sm">
+        <div className="card bg-base-100 shadow-sm">
               <figure>
-                <img src={app.image} alt={app.title} />
+                <img  className='h-50 w-auto' src={app.image} alt={app.title} />
               </figure>
               <div className="card-body">
                 <h2 className="card-title">{app.title}</h2>

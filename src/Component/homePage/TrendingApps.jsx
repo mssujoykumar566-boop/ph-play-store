@@ -3,6 +3,7 @@ import { useState } from "react";
 import AppCard from "../ui/AppCard";
 import { HashLoader } from "react-spinners";
 import { Link } from "react-router-dom";
+import UseAppsData from "../../hooks/UseAppsData";
 // import {  useLoaderData } from "react-router";
 
 // const appsPromise = fetch("/data.json").then((res) => res.json());
@@ -14,24 +15,7 @@ const TrendingApps = () => {
   //  const data = useLoaderData()
   //     console.log(data,"Data from HomePage")
 
-  const [apps, setApps] = useState([]);
-  const [loading,setLoading] = useState(true)
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch("/data.json");
-      const data = await res.json();
-      console.log(data);
-
-      setTimeout(() =>
-      {  setApps(data);
-        setLoading(false);
-      }, 2000)
-    };
-    fetchData();
-  }, []);
-
-  console.log(apps, "Apps");
+  const {apps,loading} = UseAppsData();
   console.log(loading, "Loading")
   return (
     <div className="container mx-auto my-15">
@@ -49,7 +33,7 @@ const TrendingApps = () => {
         <div className="flex items-center justify-center">
             <HashLoader color="#ad46ff" />
         </div>
-         ): (<div className="grid grid-cols-3 gap-5">
+         ): (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {apps.slice(0,9).map((app, ind) => {
           return (
             <AppCard app={app} key={ind}/>
