@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const UseAppsData = () => {
+const useAppsData = () => {
      const [apps, setApps] = useState([]);
   const [loading,setLoading] = useState(true)
 
@@ -22,4 +22,4 @@ const UseAppsData = () => {
     );
 };
 
-export default UseAppsData;
+export default useAppsData;

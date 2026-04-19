@@ -1,9 +1,9 @@
-import React, {  useEffect } from "react";
-import { useState } from "react";
+
 import AppCard from "../ui/AppCard";
 import { HashLoader } from "react-spinners";
 import { Link } from "react-router-dom";
-import UseAppsData from "../../hooks/UseAppsData";
+import useAppsData from "../../hooks/useAppsData";
+
 // import {  useLoaderData } from "react-router";
 
 // const appsPromise = fetch("/data.json").then((res) => res.json());
@@ -15,7 +15,7 @@ const TrendingApps = () => {
   //  const data = useLoaderData()
   //     console.log(data,"Data from HomePage")
 
-  const {apps,loading} = UseAppsData();
+  const {apps,loading} = useAppsData();
   console.log(loading, "Loading")
   return (
     <div className="container mx-auto my-15">

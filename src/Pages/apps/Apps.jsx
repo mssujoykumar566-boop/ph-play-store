@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+
 import { HashLoader } from 'react-spinners';
 import AppCard from '../../Component/ui/AppCard';
-import UseAppsData from '../../hooks/UseAppsData';
+import UseAppsData from '../../hooks/useAppsData';
 
 const Apps = () => {
 
