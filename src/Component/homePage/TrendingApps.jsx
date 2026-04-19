@@ -16,7 +16,7 @@ const TrendingApps = () => {
   //     console.log(data,"Data from HomePage")
 
   const {apps,loading} = useAppsData();
-  console.log(loading, "Loading")
+  // console.log(loading, "Loading")
   return (
     <div className="container mx-auto my-15">
       {/* Section Header */}

@@ -9,7 +9,7 @@ const Apps = () => {
   
 
     
-      console.log(apps,loading)
+      // console.log(apps,loading)
     return (
         <div  className='container mx-auto my-10'>
             <div className="mb-10 text-center max-w-[50%] mx-auto space-y-3">
